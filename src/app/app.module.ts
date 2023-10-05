@@ -16,7 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxStripeModule.forRoot('pk_test_51NuTQ5GuTV1P0VRgwOXKTafl5dyCQnNtvhnUl07pMIMzb4g8oLiTvSlhI72WYNmFtuPZ7ZZYp8zl7ozfcygqMiCS00R0gU4oPx'), // replace with your Stripe publishable key,
+    NgxStripeModule.forRoot('YOUR_STRIPE_PUBLISHABLE_KEY'), // replace with your Stripe publishable key,
     ReactiveFormsModule,
     HttpClientModule
   ],
