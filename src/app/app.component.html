@@ -386,6 +386,27 @@
   <input type="hidden" #selection>
 
   <div class="card-container">
+    <app-stripe-payment-request></app-stripe-payment-request>
+
+
+    <form class="stripe-form" novalidate (ngSubmit)="createToken()" [formGroup]="stripeTest">
+  
+      <input class="stripe-input" type="text" formControlName="name" placeholder="Jane Doe">
+      
+      <ngx-stripe-card
+        class="stripe-card"
+        [options]="cardOptions"
+        [elementsOptions]="elementsOptions">
+      </ngx-stripe-card>
+      
+      <button class="stripe-button" type="submit">
+        CREATE TOKEN
+      </button>
+      
+    </form>
+    
+    
+
     <div class="card card-small" (click)="selection.value = 'component'" tabindex="0">
         <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
 
@@ -504,6 +525,7 @@
       </svg>
     </a>
   </div>
+ 
 
   <!-- Footer -->
   <footer>

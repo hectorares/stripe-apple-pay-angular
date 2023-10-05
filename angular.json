@@ -21,7 +21,8 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              { "glob": "apple-developer-merchantid-domain-association", "input": "src/.well-known", "output": "/.well-known/" }
             ],
             "styles": [
               "src/styles.css"
@@ -63,7 +64,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "stripe-ng8-test:build"
+            "browserTarget": "stripe-ng8-test:build",
+            "host": "0.0.0.0",
+            "disableHostCheck": true
           },
           "configurations": {
             "production": {
